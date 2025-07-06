@@ -8,7 +8,10 @@ spec:
   source:
     repoURL: https://github.com/PAAS-data/movie_app.git
     targetRevision: main
-    path: my-app/argocd
+    path: my-app        # <-- This should be the Helm chart directory
+    helm:
+      valueFiles:
+        - values.yaml   # (optional) Use your custom values file
   destination:
     server: https://kubernetes.default.svc
     namespace: default
