@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/PAAS-data/movie_app.git
     targetRevision: main
-    path: manifests
+    path: my-app/argocd
   destination:
     server: https://kubernetes.default.svc
     namespace: default
